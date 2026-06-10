@@ -1,0 +1,26 @@
+{
+  "experiment_name": "fbtp_full_sft_stage1",
+  "trainer": "full_sft",
+  "hidden_size": 512,
+  "num_hidden_layers": 8,
+  "use_moe": 0,
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "epochs": 2,
+  "batch_size": 8,
+  "accumulation_steps": 4,
+  "learning_rate": 1e-06,
+  "max_seq_len": 384,
+  "num_workers": 4,
+  "log_interval": 20,
+  "save_interval": 100,
+  "from_weight": "pretrain",
+  "save_weight": "full_sft",
+  "data_path": "../data/processed/fbtp_sft_seed_train.jsonl",
+  "save_dir": "../reports/checkpoints/full_sft",
+  "notes": [
+    "Reference line for first-stage comparison",
+    "Use this after pretrain_512.pth is available in upstream out/"
+  ]
+}
+

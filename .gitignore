@@ -1,0 +1,34 @@
+# Python/cache
+__pycache__/
+.pytest_cache/
+.pytest_tmp*/
+*.pyc
+*.pyo
+
+# Runtime/checkpoints/logs
+reports/checkpoints/
+reports/logs/
+reports/tmp*/
+cluster/logs/
+cluster/jobs/
+weights/
+*.pth
+*.pt
+*.safetensors
+*.ckpt
+
+# Large generated datasets kept local
+data/processed/fbbp_query_compiler_train.jsonl
+data/processed/covunibind_stage2_train.jsonl
+data/processed/covunibind_stage3_short_schema_train.jsonl
+data/processed/covunibind_stage3_1_strict_schema_train.jsonl
+data/processed/fbbp_candidate_snapshot.jsonl
+data/raw/
+data/external/
+
+# Local environment / editor files
+.venv/
+venv/
+.env
+.DS_Store
+Thumbs.db

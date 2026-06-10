@@ -1,0 +1,26 @@
+{
+  "experiment_name": "fbbp_query_compiler_dpo_104m_stronger_v1b",
+  "trainer": "dpo",
+  "hidden_size": 768,
+  "num_hidden_layers": 16,
+  "use_moe": 0,
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "epochs": 1,
+  "batch_size": 2,
+  "accumulation_steps": 4,
+  "learning_rate": 0.000003,
+  "beta": 0.1,
+  "max_seq_len": 1024,
+  "num_workers": 2,
+  "log_interval": 20,
+  "save_interval": 100,
+  "from_weight": "full_sft",
+  "data_path": "data/processed/fbbp_query_compiler_dpo_stronger_v1b.jsonl",
+  "save_dir": "reports/checkpoints/dpo_query_compiler_104m_stronger_v1b",
+  "notes": [
+    "Faster stronger DPO retry after the 2400-pair run proved slow to observe",
+    "Uses 900 conversation-derived preference pairs and a slightly higher learning rate",
+    "Exploratory; evaluate only by held-out preference metrics before resume wording"
+  ]
+}

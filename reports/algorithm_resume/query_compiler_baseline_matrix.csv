@@ -1,0 +1,8 @@
+method,split,plan_valid_rate,json_parse_rate,non_empty_filter_rate,field_value_exact_match,slot_accuracy,execution_success_rate,result_overlap_at_k,repair_used_note,source
+rule_baseline,fixed_eval_prompts,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0,query_compiler_rule_score.json
+base_round1,remote_round1_holdout,0.075,,, ,0.0234,,0.0,not_reported,FINAL_RESULT_SUMMARY.md
+lora_round1,remote_round1_holdout,0.0875,,, ,0.0281,,0.0,not_reported,FINAL_RESULT_SUMMARY.md
+base_round2_json_first,remote_round2_holdout,0.0,,, ,0.0,,0.0,not_reported,FINAL_RESULT_SUMMARY.md
+lora_round2_json_first,remote_round2_holdout,0.1875,,, ,0.0578,,0.0,not_reported,FINAL_RESULT_SUMMARY.md
+baseline_v23,v15_true_holdout_no_hints,1.0,1.0,1.0,1.0,0.8141,1.0,0.28,1_of_80_rows_used_repair,baseline_v23_v15_true_holdout_score_2238710.md
+lora_v23,v15_true_holdout_no_hints,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0_of_80_rows_used_repair,lora_v23_v15_true_holdout_score_2238710.md

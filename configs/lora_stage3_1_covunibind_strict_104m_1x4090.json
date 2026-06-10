@@ -1,0 +1,24 @@
+{
+  "experiment_name": "fbtp_lora_stage3_1_covunibind_strict_104m",
+  "trainer": "lora",
+  "hidden_size": 768,
+  "num_hidden_layers": 16,
+  "use_moe": 0,
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "epochs": 2,
+  "batch_size": 12,
+  "accumulation_steps": 2,
+  "learning_rate": 0.000015,
+  "max_seq_len": 256,
+  "num_workers": 4,
+  "log_interval": 5,
+  "save_interval": 50,
+  "from_weight": "full_sft",
+  "data_path": "data/processed/covunibind_stage3_1_strict_schema_train.jsonl",
+  "save_dir": "reports/checkpoints/lora_stage3_1_covunibind_strict_104m",
+  "notes": [
+    "Round-3.1 keeps 104M / 768dim and only tightens formatting compliance",
+    "Lower LR and shorter run to preserve the positive behavior learned in round 3"
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "README.md"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "TRAINING_README.md"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "FINAL_RESULT_SUMMARY.md"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "UPSTREAM.md"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": ".gitignore"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "configs"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "query_compiler"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "scripts"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "tests"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "reports\\algorithm_resume"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "reports\\eval\\query_compiler_rule_score.md"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "reports\\eval\\query_compiler_rule_score.json"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "reports\\eval\\smoke_query_compiler"
+  },
+  {
+    "status": "copied",
+    "source": "<local_path_removed>",
+    "relative_path": "data\\eval\\fbbp_query_compiler_eval_prompt_smoke.jsonl"
+  }
+]

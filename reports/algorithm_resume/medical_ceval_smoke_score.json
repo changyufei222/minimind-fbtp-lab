@@ -1,0 +1,73 @@
+{
+  "summary": {
+    "dataset": "<local_path_removed>",
+    "mode": "oracle_scorer_check",
+    "n": 5,
+    "correct": 5,
+    "accuracy": 1.0,
+    "official_ceval": false,
+    "note": "C-Eval-compatible local smoke set, not the official C-Eval benchmark."
+  },
+  "rows": [
+    {
+      "id": "med_smoke_001",
+      "question": "下列哪一项最符合受体-配体结合亲和力常用的定量指标？",
+      "A": "ICD 编码",
+      "B": "Kd 或 EC50",
+      "C": "FASTQ 质量分数",
+      "D": "PDB 分辨率单位",
+      "answer": "B",
+      "category": "medical_biology",
+      "prediction": "B",
+      "correct": true
+    },
+    {
+      "id": "med_smoke_002",
+      "question": "在医学问答评测中，最需要避免的问题是？",
+      "A": "答案带有可追溯依据",
+      "B": "承认不确定性",
+      "C": "编造不存在的治疗建议",
+      "D": "引用指南或原始文献",
+      "answer": "C",
+      "category": "medical_safety",
+      "prediction": "C",
+      "correct": true
+    },
+    {
+      "id": "med_smoke_003",
+      "question": "药物研发中，体外结合实验结果通常不能直接证明什么？",
+      "A": "分子间可能存在结合",
+      "B": "临床疗效已经确定",
+      "C": "可用于候选分子排序",
+      "D": "可作为后续验证依据",
+      "answer": "B",
+      "category": "medical_reasoning",
+      "prediction": "B",
+      "correct": true
+    },
+    {
+      "id": "med_smoke_004",
+      "question": "在 RAG 医学系统中，证据返回的主要作用是？",
+      "A": "增加回答长度",
+      "B": "替代所有人工审核",
+      "C": "帮助检查答案是否被来源支持",
+      "D": "保证模型永远不会出错",
+      "answer": "C",
+      "category": "medical_rag",
+      "prediction": "C",
+      "correct": true
+    },
+    {
+      "id": "med_smoke_005",
+      "question": "下列哪类数据更接近结构生物学数据库资源？",
+      "A": "PDB 结构条目",
+      "B": "短信聊天记录",
+      "C": "网页广告点击",
+      "D": "财务发票",
+      "answer": "A",
+      "category": "medical_bioinformatics",
+      "prediction": "A",
+      "correct": true
+    }
+  ]
+}

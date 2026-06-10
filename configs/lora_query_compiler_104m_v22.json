@@ -1,0 +1,26 @@
+{
+  "experiment_name": "fbbp_query_compiler_104m_v22",
+  "trainer": "lora",
+  "hidden_size": 768,
+  "num_hidden_layers": 16,
+  "use_moe": 0,
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "epochs": 3,
+  "batch_size": 6,
+  "accumulation_steps": 4,
+  "learning_rate": 0.00002,
+  "max_seq_len": 1024,
+  "num_workers": 4,
+  "log_interval": 5,
+  "save_interval": 50,
+  "from_weight": "full_sft",
+  "data_path": "data/processed/fbbp_query_compiler_train.jsonl",
+  "save_dir": "reports/checkpoints/lora_query_compiler_104m_v22",
+  "notes": [
+    "Stage-22 hotspot reweighting on MiniMind2 104M / 768dim",
+    "Keeps the same v21 data logic but increases shortlist-contrast and projection-hotspot oversampling",
+    "Targets the last two projection-dependent v15 rows after v21",
+    "Keeps the reserved v15 true holdout unchanged as the sole completion gate"
+  ]
+}

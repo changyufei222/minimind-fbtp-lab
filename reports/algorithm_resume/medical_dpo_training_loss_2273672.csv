@@ -1,0 +1,11 @@
+source,epoch,step,loss,lr,reward
+reports\logs\dpo_medical_ceval_104m_2273672.log,1,2,0.6573,0.00000004,
+reports\logs\dpo_medical_ceval_104m_2273672.log,1,4,0.7875,0.00000003,
+reports\logs\dpo_medical_ceval_104m_2273672.log,1,6,0.6931,0.00000003,
+reports\logs\dpo_medical_ceval_104m_2273672.log,1,7,0.7235,0.00000003,
+reports\logs\dpo_medical_ceval_104m_2273672.log,1,8,0.6949,0.00000002,
+reports\logs\dpo_medical_ceval_104m_2273672.log,2,2,0.6964,0.00000002,
+reports\logs\dpo_medical_ceval_104m_2273672.log,2,4,0.6477,0.00000001,
+reports\logs\dpo_medical_ceval_104m_2273672.log,2,6,0.6837,0.00000001,
+reports\logs\dpo_medical_ceval_104m_2273672.log,2,7,0.6699,0.00000000,
+reports\logs\dpo_medical_ceval_104m_2273672.log,2,8,0.6612,0.00000000,

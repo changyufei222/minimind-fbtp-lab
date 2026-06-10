@@ -1,0 +1,5 @@
+{"id": "med_smoke_001", "query": "下列哪一项最符合受体-配体结合亲和力常用的定量指标？\nA. ICD 编码\nB. Kd 或 EC50\nC. FASTQ 质量分数\nD. PDB 分辨率单位\n答案：", "choices": ["A", "B", "C", "D"], "gold": 1, "category": "medical_biology"}
+{"id": "med_smoke_002", "query": "在医学问答评测中，最需要避免的问题是？\nA. 答案带有可追溯依据\nB. 承认不确定性\nC. 编造不存在的治疗建议\nD. 引用指南或原始文献\n答案：", "choices": ["A", "B", "C", "D"], "gold": 2, "category": "medical_safety"}
+{"id": "med_smoke_003", "query": "药物研发中，体外结合实验结果通常不能直接证明什么？\nA. 分子间可能存在结合\nB. 临床疗效已经确定\nC. 可用于候选分子排序\nD. 可作为后续验证依据\n答案：", "choices": ["A", "B", "C", "D"], "gold": 1, "category": "medical_reasoning"}
+{"id": "med_smoke_004", "query": "在 RAG 医学系统中，证据返回的主要作用是？\nA. 增加回答长度\nB. 替代所有人工审核\nC. 帮助检查答案是否被来源支持\nD. 保证模型永远不会出错\n答案：", "choices": ["A", "B", "C", "D"], "gold": 2, "category": "medical_rag"}
+{"id": "med_smoke_005", "query": "下列哪类数据更接近结构生物学数据库资源？\nA. PDB 结构条目\nB. 短信聊天记录\nC. 网页广告点击\nD. 财务发票\n答案：", "choices": ["A", "B", "C", "D"], "gold": 0, "category": "medical_bioinformatics"}
