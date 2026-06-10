@@ -1,23 +1,24 @@
-> Interface guide: [English](./INTERFACE_GUIDE_EN.md) | [中文](./INTERFACE_GUIDE_CN.md)
+[**English**](./README.md) | [中文](./README_CN.md)
 
 # MiniMind FBBP Query Compiler Lab
 
-Public-facing project name:
+[![Repository quality](https://github.com/changyufei222/minimind-fbtp-lab/actions/workflows/repository-quality.yml/badge.svg)](https://github.com/changyufei222/minimind-fbtp-lab/actions/workflows/repository-quality.yml)
+[![Release](https://img.shields.io/github/v/release/changyufei222/minimind-fbtp-lab?display_name=tag)](https://github.com/changyufei222/minimind-fbtp-lab/releases)
+[![Citation](https://img.shields.io/badge/citation-CITATION.cff-2f6f9f.svg)](./CITATION.cff)
 
-- **MiniMind FBBP Query Compiler Lab**
+A reproducible 1xRTX 4090 fine-tuning lab that compiles natural-language FBBP search requests into validated executable query plans.
 
-Repository directory retained for compatibility:
+**Status:** Protocol-complete query-compiler experiment | **Public release:** 2026-06-10
 
-- `minimind-fbtp-lab`
+| Start here | Resource |
+|---|---|
+| Primary documentation | [Training guide](./TRAINING_README.md) |
+| Reproducibility / implementation | [Upstream boundary](./UPSTREAM.md) |
+| Verified outcomes | [Result summary](./FINAL_RESULT_SUMMARY.md) |
 
-This repo is the training-focused supplement to the adjacent application stack:
+![Query compiler training and evaluation comparison](./reports/algorithm_resume/query_compiler_training_eval_comparison.png)
 
-- `llm-rag-knowledge-base`
-- `fbtp-mcp-rag-server`
-- `deerflow-fbtp-research-agent`
-
-This repo does not attempt to reimplement all of MiniMind. It isolates small, reproducible fine-tuning experiments that can run on `1 x RTX 4090` and produce defensible comparison results.
-
+---
 ## Current Direction
 
 The active rebuilt direction is:
@@ -290,79 +291,79 @@ See `weights/README.md`.
 ### Build the FBBP candidate snapshot
 
 ```powershell
-cd <local_path_removed>
-python .\minimind-fbtp-lab\scripts\build_fbbp_candidate_snapshot.py
+cd minimind-fbtp-lab
+python .\scripts\build_fbbp_candidate_snapshot.py
 ```
 
 ### Build the query-compiler dataset
 
 ```powershell
-cd <local_path_removed>
-python .\minimind-fbtp-lab\scripts\build_fbbp_query_compiler_dataset.py
+cd minimind-fbtp-lab
+python .\scripts\build_fbbp_query_compiler_dataset.py
 ```
 
 The default V3 build now includes repair-oriented training rows. To inspect the count:
 
 ```powershell
-cd <local_path_removed>
-Get-Content .\minimind-fbtp-lab\data\processed\fbbp_query_compiler_manifest.json
+cd minimind-fbtp-lab
+Get-Content .\data\processed\fbbp_query_compiler_manifest.json
 ```
 
 ### Run the rule baseline
 
 ```powershell
-cd <local_path_removed>
-python .\minimind-fbtp-lab\scripts\run_query_compiler_rule_baseline.py
-python .\minimind-fbtp-lab\scripts\score_query_compiler_eval.py --input-jsonl .\minimind-fbtp-lab\reports\eval\query_compiler_rule_eval.jsonl --output-json .\minimind-fbtp-lab\reports\eval\query_compiler_rule_score.json --output-md .\minimind-fbtp-lab\reports\eval\query_compiler_rule_score.md
+cd minimind-fbtp-lab
+python .\scripts\run_query_compiler_rule_baseline.py
+python .\scripts\score_query_compiler_eval.py --input-jsonl .\reports\eval\query_compiler_rule_eval.jsonl --output-json .\reports\eval\query_compiler_rule_score.json --output-md .\reports\eval\query_compiler_rule_score.md
 ```
 
 ### Run the thin demo
 
 ```powershell
-cd <local_path_removed>
-python .\minimind-fbtp-lab\scripts\demo_query_compiler.py --query "帮我筛一批 engineered 的 kunitz 候选，口服别太差，优先亲和力更强的"
+cd minimind-fbtp-lab
+python .\scripts\demo_query_compiler.py --query "帮我筛一批 engineered 的 kunitz 候选，口服别太差，优先亲和力更强的"
 ```
 
 ### Inspect the LoRA launch commands without starting training
 
 ```powershell
-cd <local_path_removed>
-powershell -ExecutionPolicy Bypass -File .\minimind-fbtp-lab\scripts\run_lora_query_compiler_104m.ps1 -ConfigPath .\minimind-fbtp-lab\configs\lora_query_compiler_104m_v3.json -WhatIf
+cd minimind-fbtp-lab
+powershell -ExecutionPolicy Bypass -File .\scripts\run_lora_query_compiler_104m.ps1 -ConfigPath .\configs\lora_query_compiler_104m_v3.json -WhatIf
 ```
 
 ### Run a local V3 smoke eval
 
 ```powershell
-cd <local_path_removed>
-Get-Content .\minimind-fbtp-lab\data\eval\fbbp_query_compiler_eval_prompts.jsonl -TotalCount 1 | Set-Content .\minimind-fbtp-lab\data\eval\fbbp_query_compiler_eval_prompts_smoke_v3.jsonl -Encoding utf8
-python .\minimind-fbtp-lab\scripts\run_query_compiler_eval.py --output-dir .\minimind-fbtp-lab\reports\eval\local_smoke_v3 --label smoke_v3 --prompts .\minimind-fbtp-lab\data\eval\fbbp_query_compiler_eval_prompts_smoke_v3.jsonl --max-new-tokens 120
+cd minimind-fbtp-lab
+Get-Content .\data\eval\fbbp_query_compiler_eval_prompts.jsonl -TotalCount 1 | Set-Content .\data\eval\fbbp_query_compiler_eval_prompts_smoke_v3.jsonl -Encoding utf8
+python .\scripts\run_query_compiler_eval.py --output-dir .\reports\eval\local_smoke_v3 --label smoke_v3 --prompts .\data\eval\fbbp_query_compiler_eval_prompts_smoke_v3.jsonl --max-new-tokens 120
 ```
 
 ### Build the round-2 dataset
 
 ```powershell
-cd <local_path_removed>
-python .\minimind-fbtp-lab\scripts\build_covunibind_stage2_dataset.py
+cd minimind-fbtp-lab
+python .\scripts\build_covunibind_stage2_dataset.py
 ```
 
 ### Run the round-2 LoRA line
 
 ```powershell
-cd <local_path_removed>
+cd minimind-fbtp-lab
 powershell -ExecutionPolicy Bypass -File .\scripts\run_lora_stage2_covunibind.ps1
 ```
 
 ### Run the round-3 LoRA line
 
 ```powershell
-cd <local_path_removed>
+cd minimind-fbtp-lab
 powershell -ExecutionPolicy Bypass -File .\scripts\run_lora_stage3_covunibind_short_104m.ps1
 ```
 
 ### Run the round-3.1 LoRA line
 
 ```powershell
-cd <local_path_removed>
+cd minimind-fbtp-lab
 powershell -ExecutionPolicy Bypass -File .\scripts\run_lora_stage3_1_covunibind_strict_104m.ps1
 ```
 
@@ -454,3 +455,5 @@ For the new query-compiler line, the minimum useful deliverables are:
 - one rule baseline score
 - one baseline vs LoRA comparison report
 - one thin demo path
+
+

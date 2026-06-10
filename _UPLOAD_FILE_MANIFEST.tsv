@@ -1,5 +1,12 @@
-_COPY_STATUS.json	1712
+.github\workflows\repository-quality.yml	811
 .gitignore	609
+.pytest_cache\.gitignore	39
+.pytest_cache\CACHEDIR.TAG	191
+.pytest_cache\README.md	310
+.pytest_cache\v\cache\lastfailed	49
+.pytest_cache\v\cache\nodeids	6635
+_COPY_STATUS.json	1712
+CITATION.cff	527
 configs\dpo_medical_ceval_104m_smoke.json	781
 configs\dpo_query_compiler_104m_smoke.json	775
 configs\dpo_query_compiler_104m_stronger_v1.json	877
@@ -30,8 +37,11 @@ configs\lora_stage1_1x4090.json	652
 configs\lora_stage2_covunibind_1x4090.json	704
 configs\lora_stage3_1_covunibind_strict_104m_1x4090.json	738
 configs\lora_stage3_covunibind_short_104m_1x4090.json	754
+CONTRIBUTING.md	1231
 data\eval\fbbp_query_compiler_eval_prompt_smoke.jsonl	679
 FINAL_RESULT_SUMMARY.md	6892
+INTERFACE_GUIDE_CN.md	987
+INTERFACE_GUIDE_EN.md	980
 query_compiler\__init__.py	80
 query_compiler\candidate_snapshot.py	8415
 query_compiler\demo.py	1093
@@ -47,7 +57,8 @@ query_compiler\scoring.py	4628
 query_compiler\sketch.py	3712
 query_compiler\synthetic_data.py	65215
 query_compiler\validator.py	5350
-README.md	17967
+README.md	18267
+README_CN.md	1480
 reports\algorithm_resume\dpo_ceval_remote_run_20260609.md	11351
 reports\algorithm_resume\dpo_training_loss_2273452.csv	699
 reports\algorithm_resume\dpo_training_loss_2273452.md	205
@@ -58,8 +69,8 @@ reports\algorithm_resume\dpo_training_loss_2273682_stronger_v1.png	100005
 reports\algorithm_resume\dpo_training_loss_2273689_stronger_v1b.csv	1755
 reports\algorithm_resume\dpo_training_loss_2273689_stronger_v1b.md	232
 reports\algorithm_resume\dpo_training_loss_2273689_stronger_v1b.png	58461
-reports\algorithm_resume\lm_eval_medical_smoke\medical_ceval_smoke_docs.jsonl	1491
 reports\algorithm_resume\lm_eval_medical_smoke\medical_ceval_smoke.yaml	398
+reports\algorithm_resume\lm_eval_medical_smoke\medical_ceval_smoke_docs.jsonl	1491
 reports\algorithm_resume\medical_ceval_smoke_score.json	2264
 reports\algorithm_resume\medical_ceval_smoke_score.md	548
 reports\algorithm_resume\medical_dpo_training_loss_2273672.csv	754
@@ -79,9 +90,9 @@ reports\algorithm_resume\query_compiler_training_eval_comparison.png	103708
 reports\algorithm_resume\query_compiler_training_eval_comparison.svg	85896
 reports\algorithm_resume\README.md	944
 reports\algorithm_resume\resume_claim_boundary_20260609.md	3434
-reports\algorithm_resume\training_loss_curve_report.md	147
 reports\algorithm_resume\training_loss_curve.csv	34
 reports\algorithm_resume\training_loss_curve.png	21614
+reports\algorithm_resume\training_loss_curve_report.md	147
 reports\algorithm_resume\training_loss_parser_check.csv	103
 reports\algorithm_resume\training_loss_parser_check.md	207
 reports\algorithm_resume\training_loss_parser_check.png	23440
@@ -120,6 +131,8 @@ scripts\run_dpo_query_compiler_104m.sh	245
 scripts\run_eval_compare.py	6318
 scripts\run_full_sft.ps1	342
 scripts\run_full_sft.sh	206
+scripts\run_lora.ps1	338
+scripts\run_lora.sh	202
 scripts\run_lora_query_compiler_104m.ps1	831
 scripts\run_lora_query_compiler_104m.sh	476
 scripts\run_lora_stage2_covunibind.ps1	370
@@ -128,8 +141,6 @@ scripts\run_lora_stage3_1_covunibind_strict_104m.ps1	400
 scripts\run_lora_stage3_1_covunibind_strict_104m.sh	305
 scripts\run_lora_stage3_covunibind_short_104m.ps1	394
 scripts\run_lora_stage3_covunibind_short_104m.sh	299
-scripts\run_lora.ps1	338
-scripts\run_lora.sh	202
 scripts\run_medical_ceval_smoke.py	3347
 scripts\run_official_ceval_medical_eval.py	11884
 scripts\run_query_compiler_eval.py	10215
@@ -138,6 +149,7 @@ scripts\score_query_compiler_eval.py	2806
 scripts\score_short_schema_eval.py	4287
 scripts\summarize_query_compiler_eval.py	4872
 scripts\watch_query_compiler_jobs.ps1	4456
+SECURITY.md	1000
 tests\test_candidate_snapshot.py	1216
 tests\test_query_compiler_eval_paths.py	1647
 tests\test_query_compiler_prompting.py	5831
@@ -150,3 +162,4 @@ tests\test_query_validator.py	3967
 tests\test_training_extensions.py	1191
 TRAINING_README.md	9421
 UPSTREAM.md	660
+weights\README.md	546
